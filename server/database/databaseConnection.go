@@ -8,7 +8,7 @@ import (
 	"gorm.io/gorm"
 )
 
-func databaseConnection() (*gorm.DB, error) {
+func DatabaseConnection() (*gorm.DB, error) {
 	databasePath := os.Getenv("DATABASE_PATH")
 	database, err := gorm.Open(sqlite.Open(databasePath), &gorm.Config{})
 	if err != nil {
